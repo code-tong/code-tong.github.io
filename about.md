@@ -16,13 +16,13 @@ title: 关于我
 <p>
  
 这个博客是我在
-<a href="http://baixin.io/#blog"> 潘柏信个人博客 </a>，博客上修改完成的。
+<a href="http://baixin.io/#blog"> 潘柏信个人博客 </a>基础上加上好友<a href="http://zhanghao.io">张浩</a>苦苦指导下才"艰难"完成。总之在这个炎热的七月初，我的个人站也算是上线了=.=。
 
 <p>
 
-如果你想搭建一个跟我一样的博客，可以看潘柏信的 
+如果你想搭建一个跟我一样的博客，可以参考潘柏信的 
 <a href="/2016/10/jekyll_tutorials1/"> Jekyll 搭建个人博客 </a>
-教程
+
 
 <p>
 
@@ -30,7 +30,7 @@ title: 关于我
 
 <p> 
 
-博客源码在 <a target="_blank" href='https://github.com/leopardpan/leopardpan.github.io/'>Github</a> 上，你的 Star 是我更新的动力，谢谢~
+博客源码在 <a target="_blank" href='https://github.com/CoderOfSong/CoderOFSong.github.io/'>Github</a> 上，你的 Star 是我更新的动力，谢谢~
 
 <p> 
 
