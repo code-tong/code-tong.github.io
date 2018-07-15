@@ -34,6 +34,14 @@ title: 关于我
 
 <p> 
 
+<h3> 友情链接 </h3>
+
+<ul>
+<li><a target="_blank" href="http://zhanghao.io/">张浩的个人博客</a></li>
+<li><a target="_blank" href="http://www.688r.cn/">佟杰的个人博客</a></li>
+<li><a target="_blank" href="http://rudynan.github.io/">南浩轩的个人博客</a></li>
+</ul>
+
 <p> 
 
 <p> 
