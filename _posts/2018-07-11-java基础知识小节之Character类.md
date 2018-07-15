@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "java基础知识小节之Character类"
-date: 2018-07-11 
+date: 2018-07-03 
 description: "java基础知识 Character类"
+tag: Java基础知识 
+---   
 
-## tag: Java基础知识
+## 知识点十： Character类
 
-# 知识点十：Character类
-
-------
+-----
 
 ## Character类
 
@@ -48,7 +48,7 @@ Character ch = 'a';
 char c = test('x');
 ```
 
---------------
+------
 
 ## 转义序列
 
@@ -80,7 +80,7 @@ public class Test {
 今天天气"好"
 ```
 
------------
+------
 
 ## Character方法
 

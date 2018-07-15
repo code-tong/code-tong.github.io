@@ -3,12 +3,12 @@ layout: post
 title: "java基础知识小节之Number和Math类"
 date: 2018-07-10 
 description: "java基础知识 Number和Math类"
+tag: Java基础知识 
+---   
 
-## tag: Java基础知识
+## 知识点九： Number和Math类
 
-# 知识点九：Number和Math类
-
-------
+-----
 
 ## Number类
 
@@ -52,9 +52,9 @@ public class Test{
 
 当 x 被赋为整型值时，由于x是一个对象，所以编译器要对x进行装箱。然后，为了使x能进行加运算，所以要对x进行拆箱。
 
------------------------
+------
 
-##Math类
+## Math类
 
 Java 的 Math 包含了用于执行基本数学运算的属性和方法，如初等指数、对数、平方根和三角函数。
 
@@ -87,15 +87,15 @@ public class Test {
 π/2的角度值：90.03.141592653589793
 ```
 
--------------------------
+------
 
-##Number 和 Math 的方法
+## Number 和 Math 的方法
 
 下面的表中列出的是 Number & Math 类常用的一些方法： 
 
 ![常用方法](https://i.imgur.com/6NstsF4.png)
 
--------------------------
+------
 
 ## Math 的 floor,round 和 ceil 方法实例比较
 
