@@ -3,10 +3,12 @@ layout: post
 title: "java基础知识小节之String类"
 date: 2018-07-12 
 description: "java基础知识 String类"
+tag: Java基础知识 
+---   
 
-## tag: Java基础知识
+## 知识点十一： String类
 
-# 知识点十一：String类
+-----
 
 字符串广泛应用 在Java 编程中，在 Java 中字符串属于对象，Java 提供了 String 类来创建和操作字符串。 
 
@@ -48,7 +50,7 @@ hello
 
 如果需要对字符串做很多修改，那么应该选择使用 StringBuffer & StringBuilder 类。
 
-------------
+------
 
 ## 字符串长度
 
@@ -76,7 +78,7 @@ public class StringDemo {
 全栈开发者社区长度 : 11
 ```
 
--------------------
+------
 
 ## 连接字符串
 
@@ -123,7 +125,7 @@ public class StringDemo {
 1、hello：world
 ```
 
--------------------
+------
 
 ## 创建格式化字符串
 
@@ -146,7 +148,7 @@ String fs;
 fs = String.format("浮点型变量的值为 " + "%f, 整型变量的值为 " + " %d, 字符串变量的值为 " + " %s", floatVar, intVar, stringVar);
 ```
 
-----------------
+------
 
 ## String方法
 
@@ -181,6 +183,6 @@ fs = String.format("浮点型变量的值为 " + "%f, 整型变量的值为 " + 
 |                    | String replace(String old,String new)                    | 在该字符串中， 将给定的旧字符串，用新字符串替换              |
 | 去除字符串两端空格 | String trim()                                            | 去除字符串两端空格，中间的不会去除，返回一个新字符串         |
 
---------------------------
+------
 
 转载请注明原地址，宋德凌的博客：[http://CoderOfSong.github.io](http://CoderOfSong.github.io) 谢谢！

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "java基础知识小节之String Buffer和String Builder类"
+title: "java基础知识小节之String Buffer和String Builder"
 date: 2018-07-13 
-description: "java基础知识 String Buffer和String Builder类"
+description: "java基础知识 String Buffer和String Builder"
+tag: Java基础知识 
+---   
 
-## tag: Java基础知识
+## 知识点十二： String Buffer和String Builder
 
-# 知识点十二：String Buffer和String Builder类
-
-------
+-----
 
 ## String Buffer和String Builder类
 
@@ -49,7 +49,7 @@ public class Test{
 hello：world
 ```
 
-----------------------
+------
 
 ## StringBuffer的方法
 
