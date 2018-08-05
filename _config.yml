@@ -16,7 +16,7 @@ comment:
 # Social
 social:
     weibo: 6288210001 
-    github: sdl
+    github: http://CoderOfSong.github.io
     # twitter: 
     mail: ling_d_s@foxmail.com
 
@@ -36,7 +36,7 @@ ga:
 #
 #
 #  _post/ 下的文章更换成你自己的文章
-#  帮忙star一下，感谢~😆 地址： https://github.com/leopardpan/leopardpan.github.io
+#  帮忙star一下，感谢~😆 地址： https://github.com/CoderOfSong/CoderOFSong.github.io
 #
 #
 # 《--------------- 下面的信息可以自行选择是否修改 ------------------------》
@@ -64,7 +64,7 @@ nav:
 
 # Pagination
 gems: [jekyll-paginate,jekyll-sitemap]
-paginate: 20
+paginate: 15
 paginate_path: "page/:num/"
 
 
