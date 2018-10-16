@@ -1,0 +1,101 @@
+---
+layout: post
+title: "SpringBoot | 第一章_第一个SpringBoot应用"
+date: 2018-10-12 
+description: "SpringBoot 第一个SpringBoot应用"
+tag: SpringBoot 
+---   
+
+##  第一章：第一个SpringBoot应用
+
+-----
+
+## 一、SpringBoot的简单介绍
+
+### 1.概述
+
+随着动态语言的流行（Ruby、Groovy、Scala、Node.js），Java的开发显得格外的笨重：繁多的配置、低下的开发效率、复杂的部署流程以及第三方技术集成难度大。 在上述环境下，`Springboot`应运而生。它使用”习惯优于配置”（项目中存在大量的配置，此外还内置一个习惯性的配置，让你无须手动进行配置）的理念让你的项目快速运行起来。使用springboot很容易创建一个独立运行（运行jar，内嵌servlet容器）、准生产级别的基于Spring框架的项目，使用`springboot`你可以不用或者只需要很少的Spring配置。 
+
+### 2.SpringBoot和传统maven-archetype-webapp区别
+
+- **打包方式不同：**
+  - 传统web maven项目使用的是maven-archetype-webapp骨架，打包方式是使用的war包
+  - Spring Boot的打包方式是使用的jar包
+- **pom.xml中引入的依赖不同：**
+  - 传统web项目是引入多个单独的依赖
+  - Spring Boot是引入的spring-boot-starter, 在spring boot中大部分依赖不需要指定version，因为版本号已经在spring-boot-starter-parent中定义过了
+- **项目目录结构不同：**
+  - 传统的web项目中src/main/java下是没有类的，Spring Boot项目中有一个启动类(Project名称+Application), 而且在src/test/java中也有一个测试类(Project名称+ApplicationTest)
+  - 传统的web项目有src/main/webapp/WEB-INF/web.xml, Spring Boot中没有web.xml
+  - 传统的web项目resources的目录是空的，Spring Boot项目中resources中有static、templates目录和一个配置文件application.properties
+- **项目运行方式不同：**
+  - 传统web项目是启动tomcat
+  - Spring Boot项目是直接运行main方法或者直接运行jar(java -jar <project>.jar)
+
+### 3.SpringBoot的核心功能
+
+- **独立运行的Spring项目**
+
+  > Spring Boot可以以jar包的形式独立运行，运行一个Spring Boot项目只需要通过java -jar xx.jar。
+
+- **内置Servlet容器**
+
+  > Spring Boot可选择内嵌Tomcat、Jetty或者Undertow，这样无须以war包形式部署。
+
+- **提供starter简化maven配置**
+
+  > Spring提供了一系列的starter pom来简化maven依赖加载，例如：当你使用了spring-boot-starter-web时，会自动加入相关依赖，无需你手动一个一个的添加坐标依赖。
+
+- **自动配置Spring**
+
+  > Spring Boot会根据在类路径中的jar包、类，为jar包里的类自动配置Bean，这样会极大地减少我们要使用的配置。当然，Spring Boot只是考虑了大多数的开发场景，并不是所有场景，若在实际开发中，我们需要自动配置bean，而Spring Boot没有提供支持，则可以自定义自动配置。
+
+- **无代码生成和xml配置**
+
+  > Spring Boot的神奇的不是借助于代码生成来实现的，而是通过条件注解来实现的，这是Spring 4.x提供的新特性，Spring 4.x提倡使用java配置和注解配置相结合，而Spring Boot不需要任何xml配置即可实现Sping Boot的所有配置。
+
+### 4.SpringBoot的优缺点
+
+- **优点**
+  1. 集成框架非常简单，例如集成SpringMVC，只需引入spring-boot-starter-web这一个依赖，也不需要做任何配置，这样集成起来非常快速方便。Spring Boot支持很多常用的框架集成, 如 log、test、mybatis、nosql、mq、模板技术(thymeleaf、freemark)、jpa、aop、actuator 等， 具体请查看[Starter POMs](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-project/spring-boot-starters)、 [Starter POMs](https://blog.csdn.net/whatlookingfor/article/details/51393398)
+  2. 引入的依赖的数量很少，例如要引入测试依赖JUnit、Hamcrest、Mockito只需要引入spring-boot-starter-test这一个依赖就行了
+  3. 自动化配置，使用默认配置，再也不需要applicationContext.xml等配置文件了
+  4. 支持自定义配置，可以配置在application.yml或者Config类中，如果自定义了就使用自定义的值，没有自定义的则使用默认的值
+  5. 运行更加简单，直接使用java -jar 命令，或者直接在IDE中运行main方法
+  6. 监控简单：提供了`actuator`包，可以使用它来对你的应用进行监控。
+- **缺点**
+  1. 缺少监控集成方案、安全管理方案：只提供基础监控，要实现生产级别的监控，监控方案需要自己动手解决；
+  2. 高度封装，出现问题不易排查，适合有开发惊讶的攻城狮，不适合初学者，初学者上手容易，一旦出现问题就很难排查。
+  3. 将现有或传统的Spring Framework项目转换为Spring Boot应用程序是一个非常困难和耗时的过程。它仅适用于全新Spring项目。
+  4. Spring Boot 正在快速发展，可能版本变动比较大
+
+----------------------
+
+## 二、工程搭建
+
+> 使用的工具为：`Spring Tool Suite(3.9.3.RELEASE)`
+> SpringBoot：1.5.14.RELEASE
+
+**Spring Tool Suite 下载地址：https://spring.io/tools/sts/all**
+
+### 1.创建项目
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------
+
+- 转载请注明原地址https://blog.lqdev.cn/categories/springboot/
+
+- 请关注宋德凌的博客：[http://CoderOfSong.github.io](http://CoderOfSong.github.io) 谢谢！
