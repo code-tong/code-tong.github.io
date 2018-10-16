@@ -74,25 +74,195 @@ tag: SpringBoot
 ## 二、工程搭建
 
 > 使用的工具为：`Spring Tool Suite(3.9.3.RELEASE)`
+>
 > SpringBoot：1.5.14.RELEASE
 
-**Spring Tool Suite 下载地址：https://spring.io/tools/sts/all**
+**[Spring Tool Suite 点击下载](https://spring.io/tools/sts/all)**
 
-### 1.创建项目
+### 1.创建SpringBoot工程
 
+> 利用**Spring Initializr**进行快速创建项目
 
+- **选择Dashboard–>CREATE SPRING STARTER PROJECT进行创建项目，或者可以选择file–>new–>Spring Starter Project，打开创建面板**
 
+  **第一种方式：**
+  [![img](http://qiniu.xds123.cn/18-7-11/73137443.jpg)](http://qiniu.xds123.cn/18-7-11/73137443.jpg)
 
+  **第二种方式：**
+  [![img](http://qiniu.xds123.cn/18-7-11/72277454.jpg)](http://qiniu.xds123.cn/18-7-11/72277454.jpg)
 
+- **出现创建面板，填写项目信息**
 
+  > 这里url建议直接填写:`https://start.spring.io`(默认是http方式)
 
+  [![img](http://qiniu.xds123.cn/18-7-11/71296322.jpg)](http://qiniu.xds123.cn/18-7-11/71296322.jpg)
 
+  **maven相关命名说明**
 
+  1. **Group**：一般为逆向域名格式，如本博客域名为`coderofsong.github.io`，则group一般以`io.github.coderofsong`开头
+  2. **Artifact**：唯一标识，一般为项目名称。
+     *具体maven相关信息，可自行搜索,这里只简单阐述*
 
+- **选择依赖包和版本**
 
+  ![创建.png](https://i.imgur.com/K1AEPu8.png)
 
+  **除此下载包时，可能会比较慢，建议替换成阿里云的maven镜像**
 
+### 2.项目结构
 
+```
+- src
+    -main
+        -java
+            -cn.lqdev.learning.springboot.chapter1
+                #主函数，启动类，运行它如果运行了 Tomcat、Jetty、Undertow 等容器
+                -Chapter1Application	
+        -resouces
+            #存放静态资源 js/css/images 等
+            - statics
+            #存放 html 模板文件
+            - templates
+            #主要的配置文件，SpringBoot启动时候会自动加载application.properties/bootstrap.properties	
+            - application.properties
+    #测试文件存放目录		
+    -test
+ # pom.xml 文件是Maven构建的基础，里面包含了我们所依赖JAR和Plugin的信息
+- pom
+```
+
+![目录结构.png](https://i.imgur.com/PjioQbF.png)
+
+### 3.pom依赖
+
+> 由于使用了`Spring Initializr`直接创建项目，相关依赖自动添加好了。 
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+ 
+	<groupId>cn.lqdev.learning</groupId>
+	<artifactId>springboot-chapter1</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>chapter-1</name>
+	<description>Spring Boot | 第一章：第一个Springboot应用</description>
+
+    <!-- Springboot的版本，大家选择时，应该选择 RELEASE 版本 -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.14.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+	    <!-- 内嵌了tomcat服务器，开发简单的web应用，此依赖即可  -->
+ 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+        <!-- 测试包 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>
+```
+
+### 4.主入口
+
+```java
+package com.sdl.springboot.day01;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+/**
+ * 启动类
+ * @author:    		songdeling
+ * @classname: 		Day01Application
+ * @description: 	TODO
+ * @date:			2018年10月16日
+ */
+@SpringBootApplication
+public class Day01Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Day01Application.class, args);
+	}
+}
+```
+
+### 5.编写controller
+
+```java
+package com.sdl.springboot.day01.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+/**
+ * @author:    		songdeling
+ * @classname: 		SayHelloController
+ * @description: 	TODO
+ * @date:			2018年10月16日
+ */
+//@RestController = @Controller + @ResponseBody 默认直接返回json
+@RestController
+public class SayHelloController {
+
+	@RequestMapping(value = "/sayHello", method = RequestMethod.GET)
+	public String sayHello() {
+		return "Hello World";
+	}
+}
+```
+
+### 6.启动
+
+> 直接`Chapter1Application`,右键 `run as` –> `Spring Boot App` 即可。 
+
+看见以下提示，说明启动成功： 
+
+![启动1.png](https://i.imgur.com/E8hjrjc.png)
+
+**简单说明**
+
+1. springboot 默认的端口号为：8080，此时浏览器访问：`127.0.0.1:8080/sayHello`即可查看。
+2. 需要修改默认端口号时及上下文路径时，只需要在`application.properties`设置以下属性：
+
+```
+# 端口号
+server.port=8888
+# 应用上下文路径
+server.context-path=/day01
+```
+
+访问：http://localhost:8080/sayHello
+
+![启动2.png](https://i.imgur.com/EanIYE5.png)
+
+**自此，一个简单的SpringBoot就开发完成了。比起原来的springmvc时的开发效率，简直是一个质的飞跃，无需再烦扰烦人的xml配置文件了。终于可以快乐的撸代码了~**
 
 -------------------
 
