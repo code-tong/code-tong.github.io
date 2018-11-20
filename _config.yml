@@ -18,12 +18,12 @@ social:
     weibo: 6288210001 
     github: http://CoderOfSong.github.io
     # twitter: 
-    mail: ling_d_s@foxmail.com
+    mail: ling.d.s@foxmail.com
 
 # 百度统计 
-# 使用博客模板请去掉或者更换 id 
+# 使用博客模板请去掉或者更换 id 这个地方我写死了,要更改请去head.html更改相应的js
 baidu:
-    id: 2be395230e00e4de16e634a286f4356b
+    #id: 2be395230e00e4de16e634a286f4356b
     
 
 # Google Analytics
