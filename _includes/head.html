@@ -33,7 +33,7 @@
   </script>  
 
 <!-- 百度统计 -->
-  {% if site.baidu.id %}
+  <!--{% if site.baidu.id %}
   <script>
       var _hmt = _hmt || [];
       (function() {
@@ -43,7 +43,16 @@
         s.parentNode.insertBefore(hm, s);
       })();
   </script>
-  {% endif %}
+  {% endif %}-->
+  <script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?2be395230e00e4de16e634a286f4356b";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+  </script>
 
 <!-- google 统计 -->
   {% if site.ga.id %}
