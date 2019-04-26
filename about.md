@@ -44,6 +44,16 @@ title: 关于我
 
 <p> 
 
+<h3> 来玩小游戏 </h3>
+
+<li><a target="_blank" href="http://123.206.74.224:8080/H5Game/2048/index.html">2048</a></li>
+<li><a target="_blank" href="http://123.206.74.224:8080/H5Game/RetroSnaker/index.html">贪吃蛇</a></li>
+<li><a target="_blank" href="http://123.206.74.224:8080/H5Game/Super-Mario/index.html">超级玛丽</a></li>
+
+<li><a target="_blank" href="http://123.206.74.224:8080/H5Game/Tetris/index.html">俄罗斯方块</a></li>
+
+<li><a target="_blank" href="http://123.206.74.224:8080/H5Game/Gobang/index.html">Gobang</a></li>
+
 <p> 
 
 
