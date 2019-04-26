@@ -54,7 +54,9 @@ title: 关于我
 
 <li><a target="_blank" href="http://123.206.74.224:8080/H5Game/Super-Mario/index.html">超级玛丽</a></li>
 
-<li><a target="_blank" href="http://123.206.74.224:8080/H5Game/Tetris/index.html">俄罗斯方块</a></li>
+<li><a target="_blank" href="http://123.206.74.224:8080/H5Game/Tetris/Single/index.html">俄罗斯方块_单人版</a></li>
+
+<li><a target="_blank" href="http://123.206.74.224:8080/H5Game/Tetris/online/index.html">俄罗斯方块_联机版</a></li>
 
 <li><a target="_blank" href="http://123.206.74.224:8080/H5Game/Gobang/index.html">五子棋</a></li>
 
