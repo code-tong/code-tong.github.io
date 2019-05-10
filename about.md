@@ -62,6 +62,8 @@ title: 关于我
 
 <p> 
 
+<a target="_blank" href="/files/20190507_QCon2019_ChaosBlade0.5.pdf">20190507_QCon2019_云原生架构下的混沌工程实践0.5</a>
+
 
 {% include comments.html %}
 
