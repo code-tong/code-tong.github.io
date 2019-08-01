@@ -30,16 +30,14 @@ title: 关于我
 
 <p> 
 
-博客源码在 <a target="_blank" href='https://github.com/CoderOfSong/CoderOFSong.github.io/'>Github</a> 上，你的 Star 是我更新的动力，谢谢~
+博客源码在 <a target="_blank" href='https://github.com/code-tong/code-tong.github.io/'>Github</a> 上，你的 Star 是我更新的动力，谢谢~
 
 <p> 
 
 <h3> 友情链接 </h3>
 
 <ul>
-<li><a target="_blank" href="http://zhanghao.io/">张浩的个人博客</a></li>
-<li><a target="_blank" href="http://www.688r.cn/">佟杰的个人博客</a></li>
-<li><a target="_blank" href="http://rudynan.github.io/">南浩轩的个人博客</a></li>
+
 </ul>
 
 <p> 
